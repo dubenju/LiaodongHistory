@@ -235,8 +235,8 @@ public class QuanLiao {
         DefaultVertex 长奠堡 = new DefaultVertex(UCity.getCity("■长奠堡"));
         DefaultVertex 苏佃子城 = new DefaultVertex(UCity.getCity("■苏佃子城"));
         DefaultVertex 险山堡 = new DefaultVertex(UCity.getCity("▼险山堡"));
-        DefaultVertex 宁东堡 = new DefaultVertex(UCity.getCity("▼宁东堡"));
-        DefaultVertex 江沿台堡 = new DefaultVertex(UCity.getCity("▼江沿台堡"));
+        DefaultVertex 宁东堡 = new DefaultVertex(UCity.getCity("宁东堡"));
+        DefaultVertex 江沿台堡 = new DefaultVertex(UCity.getCity("江沿台堡"));
         DefaultVertex 镇江堡 = new DefaultVertex(UCity.getCity("■镇江堡"));
         DefaultVertex 南荒沟烽火台 = new DefaultVertex(UCity.getCity("南荒沟烽火台"));
         DefaultVertex 炮台山烽火台 = new DefaultVertex(UCity.getCity("炮台山烽火台"));

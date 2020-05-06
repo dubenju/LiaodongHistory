@@ -24,7 +24,7 @@ import javay.util.graph.DefaultGraph;
 import javay.util.graph.DefaultVertex;
 import javay.util.graph.Graph;
 
-public class DongDuan {
+public class Zaoqi {
     private GoThread t = null;
 
     private Runnable run = null; // 更新组件的线程
@@ -34,14 +34,14 @@ public class DongDuan {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                DongDuan fg = new DongDuan();
+                Zaoqi fg = new Zaoqi();
             }
         });
     }
     /**
-     * QuanLiao.
+     * Zaoqi.
      */
-    public DongDuan() {
+    public Zaoqi() {
         DefaultVertex 老龙头 = new DefaultVertex(UCity.getCity("老龙头"));
         DefaultVertex 天下第一关 = new DefaultVertex(UCity.getCity("天下第一关"));
         DefaultVertex 角山长城 = new DefaultVertex(UCity.getCity("角山长城"));
@@ -222,6 +222,8 @@ public class DongDuan {
         DefaultVertex 东山烽火台 = new DefaultVertex(UCity.getCity("东山烽火台"));
         DefaultVertex 二头山烽火台 = new DefaultVertex(UCity.getCity("二头山烽火台"));
         DefaultVertex 大古山烽火台 = new DefaultVertex(UCity.getCity("大古山烽火台"));
+        DefaultVertex 小孤山烽火台 = new DefaultVertex(UCity.getCity("小孤山烽火台"));
+        DefaultVertex 平坨烽火台 = new DefaultVertex(UCity.getCity("平坨烽火台"));
         DefaultVertex 连山关 = new DefaultVertex(UCity.getCity("连山关"));
         DefaultVertex 靉阳堡 = new DefaultVertex(UCity.getCity("靉阳堡"));
         DefaultVertex 洒马吉堡 = new DefaultVertex(UCity.getCity("洒马吉堡"));
@@ -253,6 +255,8 @@ public class DongDuan {
         DefaultVertex 张其哈剌佃子 = new DefaultVertex(UCity.getCity("■张其哈剌佃子"));
         DefaultVertex 孤山新堡 = new DefaultVertex(UCity.getCity("■孤山新堡"));
         DefaultVertex 新奠堡 = new DefaultVertex(UCity.getCity("■新奠堡"));
+        DefaultVertex 石岔口 = new DefaultVertex(UCity.getCity("石岔口"));
+        DefaultVertex 宽佃子 = new DefaultVertex(UCity.getCity("宽佃子"));
         DefaultVertex 宽奠堡 = new DefaultVertex(UCity.getCity("■宽奠堡"));
         DefaultVertex 松子岭 = new DefaultVertex(UCity.getCity("松子岭"));
         DefaultVertex 干滩子 = new DefaultVertex(UCity.getCity("干滩子"));
@@ -262,9 +266,11 @@ public class DongDuan {
         DefaultVertex 长奠堡 = new DefaultVertex(UCity.getCity("■长奠堡"));
         DefaultVertex 苏佃子城 = new DefaultVertex(UCity.getCity("■苏佃子城"));
         DefaultVertex 险山堡 = new DefaultVertex(UCity.getCity("▼险山堡"));
+        DefaultVertex 险山台 = new DefaultVertex(UCity.getCity("险山台"));
         DefaultVertex 朝阳寺 = new DefaultVertex(UCity.getCity("朝阳寺"));
         DefaultVertex 宁东堡 = new DefaultVertex(UCity.getCity("宁东堡"));
         DefaultVertex 媳妇山堡 = new DefaultVertex(UCity.getCity("媳妇山堡"));
+        DefaultVertex 江沿台 = new DefaultVertex(UCity.getCity("江沿台"));
         DefaultVertex 江沿台堡 = new DefaultVertex(UCity.getCity("江沿台堡"));
         DefaultVertex 镇江堡 = new DefaultVertex(UCity.getCity("■镇江堡"));
         DefaultVertex 南荒沟烽火台 = new DefaultVertex(UCity.getCity("南荒沟烽火台"));
@@ -512,75 +518,79 @@ public class DongDuan {
 //        graph.setEdge(长勇堡, 长营堡, 1);
 //        graph.setEdge(长营堡, 武靖营堡, 1);
 
-        graph.setEdge(王杲山, 古勒城, 1);
-        graph.setEdge(古勒城, 扎喀尖, 1);
-        graph.setEdge(古勒城, 玳珉关, 1);
-        graph.setEdge(古勒城, 雅尔哈关, 1);
-        graph.setEdge(古勒城, 札喀关, 1);
-        graph.setEdge(扎喀尖, 建州老寨, 1);
-        graph.setEdge(建州老寨, 章甲城, 1);
+//        graph.setEdge(王杲山, 古勒城, 1);
+//        graph.setEdge(古勒城, 扎喀尖, 1);
+//        graph.setEdge(古勒城, 玳珉关, 1);
+//        graph.setEdge(古勒城, 雅尔哈关, 1);
+//        graph.setEdge(古勒城, 札喀关, 1);
+//        graph.setEdge(扎喀尖, 建州老寨, 1);
+//        graph.setEdge(建州老寨, 章甲城, 1);
 
-        graph.setEdge(抚顺城, 会安堡, 1);
-        graph.setEdge(抚顺城, 辽代古塔, 1);
-        graph.setEdge(抚顺城, 清代观音阁, 1);
+//        graph.setEdge(抚顺城, 会安堡, 1);
+//        graph.setEdge(抚顺城, 辽代古塔, 1);
+//        graph.setEdge(抚顺城, 清代观音阁, 1);
         graph.setEdge(抚顺城, 东州堡, 1);
         graph.setEdge(抚顺关, 东州堡, 1);
-        graph.setEdge(抚顺关, 王杲山, 1);
-        graph.setEdge(抚顺关, 萨尔浒, 1);
+//        graph.setEdge(抚顺关, 王杲山, 1);
+//        graph.setEdge(抚顺关, 萨尔浒, 1);
 
         graph.setEdge(东州堡, 马根单堡, 1);
         graph.setEdge(东州堡, 抚顺城, 1);
-        graph.setEdge(东州堡, 东洲村, 1);
-        graph.setEdge(东州堡, 大东村, 1);
-        graph.setEdge(东州堡, 小东村, 1);
-        graph.setEdge(东州堡, 奉集堡, 1);
+//        graph.setEdge(东州堡, 东洲村, 1);
+//        graph.setEdge(东州堡, 大东村, 1);
+//        graph.setEdge(东州堡, 小东村, 1);
+//        graph.setEdge(东州堡, 奉集堡, 1);
+//
+//        graph.setEdge(马根单堡, 散羊峪堡, 1);
+//
+//        graph.setEdge(散羊峪堡, 鸦鹘关, 1);
+//        graph.setEdge(鸦鹘关, 抚顺关, 1);
+//        graph.setEdge(鸦鹘关, 新鸦鹘关, 1);
+//        graph.setEdge(鸦鹘关, 镇朔关, 1);
 
-        graph.setEdge(马根单堡, 散羊峪堡, 1);
-
-        graph.setEdge(散羊峪堡, 鸦鹘关, 1);
-        graph.setEdge(鸦鹘关, 抚顺关, 1);
-        graph.setEdge(鸦鹘关, 新鸦鹘关, 1);
-        graph.setEdge(鸦鹘关, 镇朔关, 1);
-
-        graph.setEdge(清河堡, 散羊峪堡, 1);
+        graph.setEdge(清河堡, 马根单堡, 1);
         graph.setEdge(清河堡, 鸦鹘关, 1);
-        graph.setEdge(清河堡, 一堵墙堡, 1);
+        graph.setEdge(清河堡, 硷场堡, 1);
 
-        graph.setEdge(一堵墙堡, 硷场堡, 1);
+//        graph.setEdge(一堵墙堡, 硷场堡, 1);
 
-        graph.setEdge(硷场堡, 孤山堡, 1);
-        graph.setEdge(硷场堡, 孤山新堡, 1);
-
-        graph.setEdge(孤山堡, 张其哈剌佃子, 1);
-        graph.setEdge(孤山新堡, 孤山堡, 1);
-        graph.setEdge(孤山新堡, 靉阳堡, 1);
-        graph.setEdge(连山关, 镇朔关, 1);
+        graph.setEdge(硷场堡, 洒马吉堡, 1);
+//        graph.setEdge(硷场堡, 孤山新堡, 1);
+//
+//        graph.setEdge(孤山堡, 张其哈剌佃子, 1);
+//        graph.setEdge(孤山新堡, 孤山堡, 1);
+//        graph.setEdge(孤山新堡, 靉阳堡, 1);
+//        graph.setEdge(连山关, 镇朔关, 1);
         graph.setEdge(靉阳堡, 镇朔关, 1);
 
-        graph.setEdge(镇朔关, 柏林川村, 1);
-        graph.setEdge(镇朔关, 小边沟, 1);
-        graph.setEdge(镇朔关, 二台子烽火台, 1);
-        graph.setEdge(二台子烽火台, 三台子烽火台, 1);
-        graph.setEdge(三台子烽火台, 三台子小楼烽火台, 1);
-        graph.setEdge(三台子烽火台, 东山烽火台, 1);
+//        graph.setEdge(镇朔关, 柏林川村, 1);
+//        graph.setEdge(镇朔关, 小边沟, 1);
+//        graph.setEdge(镇朔关, 二台子烽火台, 1);
+//        graph.setEdge(二台子烽火台, 三台子烽火台, 1);
+//        graph.setEdge(三台子烽火台, 三台子小楼烽火台, 1);
+//        graph.setEdge(三台子烽火台, 东山烽火台, 1);
         graph.setEdge(镇朔关, 长岭烽火台, 1);
-        graph.setEdge(镇朔关, 二头山烽火台, 1);
-        graph.setEdge(二头山烽火台, 大古山烽火台, 1);
-        graph.setEdge(大古山烽火台, 贾家堡子烽火台, 1);
-        graph.setEdge(镇朔关, 新奠堡, 1);
+        graph.setEdge(镇朔关, 小孤山烽火台, 1);
+        graph.setEdge(镇朔关, 平坨烽火台, 1);
+//        graph.setEdge(镇朔关, 二头山烽火台, 1);
+//        graph.setEdge(二头山烽火台, 大古山烽火台, 1);
+//        graph.setEdge(大古山烽火台, 贾家堡子烽火台, 1);
+//        graph.setEdge(镇朔关, 新奠堡, 1);
 
         graph.setEdge(靉阳堡, 洒马吉堡, 1);
         graph.setEdge(靉阳堡, 新安堡, 1);
 //        graph.setEdge(靉阳堡, 险山堡, 1);
 
-        graph.setEdge(新安堡, 险山堡, 1);
+//        graph.setEdge(新安堡, 险山堡, 1);
+        graph.setEdge(宽佃子, 石岔口, 1);
+        graph.setEdge(险山台, 宽佃子, 1);
+        graph.setEdge(险山台, 汤站堡, 1);
+//        graph.setEdge(险山堡, 凤凰城堡, 1);
+//        graph.setEdge(险山堡, 朝阳寺, 1);
+//        graph.setEdge(险山堡, 宁东堡, 1);
 
-        graph.setEdge(险山堡, 凤凰城堡, 1);
-        graph.setEdge(险山堡, 朝阳寺, 1);
-        graph.setEdge(险山堡, 宁东堡, 1);
-
-        graph.setEdge(宁东堡, 媳妇山堡, 1);
-        graph.setEdge(宁东堡, 江沿台堡, 1);
+//        graph.setEdge(宁东堡, 媳妇山堡, 1);
+//        graph.setEdge(宁东堡, 江沿台堡, 1);
 //        graph.setEdge(辽阳, 甜水站堡, 1);
 //        graph.setEdge(甜水站堡, 青苔峪堡, 1);
 //        graph.setEdge(甜水站堡, 洒马吉堡, 1);
@@ -588,7 +598,7 @@ public class DongDuan {
 //        graph.setEdge(青苔峪堡, 凤凰城堡, 1);
 //        graph.setEdge(镇夷堡, 镇东堡, 1);
 //        graph.setEdge(镇东堡, 凤凰城堡, 1);
-//        graph.setEdge(凤凰城堡, 汤站堡, 1);
+        graph.setEdge(凤凰城堡, 汤站堡, 1);
 //        graph.setEdge(凤凰城堡, 新安堡, 1);
 //        graph.setEdge(汤站堡, 新安堡, 1);
 //        graph.setEdge(汤站堡, 宁东堡, 1);
@@ -597,42 +607,43 @@ public class DongDuan {
 
 ////        graph.setEdge(草河堡, 新安堡, 1);
 //        graph.setEdge(新安堡, 靉阳堡, 1);
-
-        graph.setEdge(新安堡, 新奠堡, 1);
-        graph.setEdge(新安堡, 六道河城址, 1);
-        graph.setEdge(新安堡, 贾家堡子烽火台, 1);
+//
+//        graph.setEdge(新安堡, 新奠堡, 1);
+//        graph.setEdge(新安堡, 六道河城址, 1);
+//        graph.setEdge(新安堡, 贾家堡子烽火台, 1);
 //
         graph.setEdge(新奠堡, 宽奠堡, 1);
-//        graph.setEdge(宽奠堡, 松子岭, 1);
-//        graph.setEdge(宽奠堡, 干滩子, 1);
-        graph.setEdge(宽奠堡, 姜家堡土城址, 1);
-        graph.setEdge(宽奠堡, 双岭子土城址, 1);
-//        graph.setEdge(宽奠堡, 安平城, 1);
-        graph.setEdge(宽奠堡, 大奠子堡, 1);
-        graph.setEdge(险山堡, 宽奠堡, 1);
+////        graph.setEdge(宽奠堡, 松子岭, 1);
+////        graph.setEdge(宽奠堡, 干滩子, 1);
+//        graph.setEdge(宽奠堡, 姜家堡土城址, 1);
+//        graph.setEdge(宽奠堡, 双岭子土城址, 1);
+////        graph.setEdge(宽奠堡, 安平城, 1);
+//        graph.setEdge(宽奠堡, 大奠子堡, 1);
+//        graph.setEdge(险山堡, 宽奠堡, 1);
 //        graph.setEdge(险山堡, 大奠堡, 1);
 //
 
-        graph.setEdge(安平城,蒲石河土城址, 1);
-        graph.setEdge(安平城, 城东山烽火台, 1);
-        graph.setEdge(安平城, 生铁顶子烽火台, 1);
-        graph.setEdge(大奠堡, 安平城, 1);
-        graph.setEdge(大奠堡, 大奠子堡, 1);
-        graph.setEdge(大奠子堡, 永奠堡, 1);
-        graph.setEdge(宁东堡, 永奠堡, 1);
-//        graph.setEdge(永奠堡, 尖头山烽火台, 1);
-        graph.setEdge(永奠堡, 长奠堡, 1);
-        graph.setEdge(江沿台堡, 长奠堡, 1);
+//        graph.setEdge(安平城,蒲石河土城址, 1);
+//        graph.setEdge(安平城, 城东山烽火台, 1);
+//        graph.setEdge(安平城, 生铁顶子烽火台, 1);
+//        graph.setEdge(大奠堡, 安平城, 1);
+//        graph.setEdge(大奠堡, 大奠子堡, 1);
+//        graph.setEdge(大奠子堡, 永奠堡, 1);
+//        graph.setEdge(宁东堡, 永奠堡, 1);
+////        graph.setEdge(永奠堡, 尖头山烽火台, 1);
+//        graph.setEdge(永奠堡, 长奠堡, 1);
+//        graph.setEdge(江沿台堡, 长奠堡, 1);
 
-        graph.setEdge(江沿台堡, 虎山长城, 1);
+        graph.setEdge(江沿台, 虎山长城, 1);
+//        graph.setEdge(江沿台堡, 虎山长城, 1);
 //        graph.setEdge(长奠堡, 拉古哨, 1);
 //        graph.setEdge(长奠堡, 向阳西山烽火台, 1);
 //        graph.setEdge(长奠堡, 长甸东山烽火台, 1);
 //        graph.setEdge(长奠堡, 台沟烽火台, 1);
 //        graph.setEdge(长奠堡, 前进烽火台, 1);
-        graph.setEdge(长奠堡, 苏佃子城, 1);
-        graph.setEdge(苏佃子城, 镇江堡, 1);
-        graph.setEdge(镇江堡, 宣城卫, 1);
+//        graph.setEdge(长奠堡, 苏佃子城, 1);
+//        graph.setEdge(苏佃子城, 镇江堡, 1);
+//        graph.setEdge(镇江堡, 宣城卫, 1);
 //        graph.setEdge(汤站堡, 镇江堡, 1);
 
 //        graph.setEdge(虎山长城, 南荒沟烽火台, 1);
@@ -642,12 +653,12 @@ public class DongDuan {
 //        graph.setEdge(钟鼓楼, 拉古哨, 1);
 //
 //
-        graph.setEdge(建州老寨, 鸦鹘关, 1);
-        graph.setEdge(建州老寨, 牛毛寨, 1);
-        graph.setEdge(牛毛寨, 董古寨, 1);
-        graph.setEdge(董古寨, 夹道子村, 1);
-        graph.setEdge(夹道子村, 小雅河村, 1);
-        graph.setEdge(牛毛寨, 亮马佃, 1);
+//        graph.setEdge(建州老寨, 鸦鹘关, 1);
+//        graph.setEdge(建州老寨, 牛毛寨, 1);
+//        graph.setEdge(牛毛寨, 董古寨, 1);
+//        graph.setEdge(董古寨, 夹道子村, 1);
+//        graph.setEdge(夹道子村, 小雅河村, 1);
+//        graph.setEdge(牛毛寨, 亮马佃, 1);
 //
 //        graph.setEdge(老殷大尧沟山烽火台, 老黄前沟东山烽火台, 1);
 //        graph.setEdge(老黄前沟东山烽火台, 老付家前山烽火台, 1);
@@ -803,7 +814,7 @@ public class DongDuan {
       panelBtn.add(trjBtn);
       panelBtn.add(gbwBtn);
       frame.setLocation(0, 0);
-      frame.setTitle("辽东长城东端起点示意图");
+      frame.setTitle("1469年早期韩斌建辽东河东段长城示意图");
       frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
       frame.pack();
       frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);

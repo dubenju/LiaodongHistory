@@ -9,7 +9,7 @@ public class ModelCity {
   private double longitude;
   /** 纬度 */
   private double atitude;
-  /** 海拔 */
+  /** 海拔（米） */
   private double altitude;
 
   public ModelCity(String name, double longitude, double atitude, double altitude) {

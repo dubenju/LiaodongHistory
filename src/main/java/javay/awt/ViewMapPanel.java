@@ -84,20 +84,27 @@ public class ViewMapPanel extends Container {
         g2d.fillOval(vertex.getX() - 3, vertex.getY() - 3, 7, 7);
         g2d.setColor(ColorUIResource.WHITE);
         g2d.drawString(((ModelCity) vertex.getValue()).getName(), vertex.getX() - 5, vertex.getY() - 5);
-//        if (((ModelCity) vertex.getValue()).getName().indexOf("大奠堡") >= 0) {
-//          g2d.setColor(ColorUIResource.GREEN);
+        if (((ModelCity) vertex.getValue()).getName().indexOf("镇朔关") >= 0) {
+          g2d.setColor(ColorUIResource.GREEN);
 //          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
-//          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
 //          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
-//          //g2d.setColor(ColorUIResource.YELLOW);
-//        }
-//        if (((ModelCity) vertex.getValue()).getName().indexOf("■大佃子堡，") >= 0) {
-//          g2d.setColor(new Color(204, 255, 255));
+          //g2d.setColor(ColorUIResource.YELLOW);
+        }
+        if (((ModelCity) vertex.getValue()).getName().indexOf("鸦鹘关，1") >= 0) {
+          g2d.setColor(new Color(204, 255, 255));
 //          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
-//          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
 //          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
-//          //g2d.setColor(ColorUIResource.YELLOW);
-//        }
+          //g2d.setColor(ColorUIResource.YELLOW);
+        }
+        if (((ModelCity) vertex.getValue()).getName().indexOf("抚顺关") >= 0) {
+            g2d.setColor(ColorUIResource.PINK);
+//            g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
+            g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+//            g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
+            //g2d.setColor(ColorUIResource.YELLOW);
+          }
     }
 
     // 边
