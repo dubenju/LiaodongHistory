@@ -30,4 +30,6 @@ public interface Edge {
   public DefaultEdge getNextEdge();
 
   public void setNextEdge(Edge nextEdge);
+
+  public String getComment();
 }

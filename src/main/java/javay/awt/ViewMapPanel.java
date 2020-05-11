@@ -14,8 +14,12 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.Stroke;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 
+import javax.imageio.ImageIO;
 import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.DimensionUIResource;
 
@@ -25,6 +29,8 @@ public class ViewMapPanel extends Container {
    */
   private static final long serialVersionUID = 1L;
   private DefaultGraph graph;
+//  private BufferedImage screenImage;
+  private BufferedImage backgroundImage;
 
   /**
    * ViewMapPanel.
@@ -38,6 +44,13 @@ public class ViewMapPanel extends Container {
     this.setPreferredSize(new DimensionUIResource(1320, 1320));
     this.setLayout(null);
     this.setBackground(ColorUIResource.BLACK);
+//    this.screenImage = new BufferedImage(1240, 1240, 2);
+    try {
+        this.backgroundImage = ImageIO.read(new File("./input/zaoqi2.jpg"));
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+//    this.screenImage.drawImage(backgroundImage, 0, 0, null);
     repaint();
   }
 
@@ -46,8 +59,12 @@ public class ViewMapPanel extends Container {
    */
   @Override
   public void paint(Graphics gh) {
+
     gh.setColor(ColorUIResource.BLACK);
     gh.fillRect(0, 0, this.getWidth(), this.getHeight());
+
+    gh.drawImage(this.backgroundImage, 30 , 30, 1240, 1240, null);
+ 
     drawMap(gh);
     super.paint(gh);
   }
@@ -84,27 +101,27 @@ public class ViewMapPanel extends Container {
         g2d.fillOval(vertex.getX() - 3, vertex.getY() - 3, 7, 7);
         g2d.setColor(ColorUIResource.WHITE);
         g2d.drawString(((ModelCity) vertex.getValue()).getName(), vertex.getX() - 5, vertex.getY() - 5);
-        if (((ModelCity) vertex.getValue()).getName().indexOf("镇朔关") >= 0) {
-          g2d.setColor(ColorUIResource.GREEN);
-//          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
-          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
-//          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
-          //g2d.setColor(ColorUIResource.YELLOW);
-        }
-        if (((ModelCity) vertex.getValue()).getName().indexOf("鸦鹘关，1") >= 0) {
-          g2d.setColor(new Color(204, 255, 255));
-//          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
-          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
-//          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
-          //g2d.setColor(ColorUIResource.YELLOW);
-        }
-        if (((ModelCity) vertex.getValue()).getName().indexOf("抚顺关") >= 0) {
-            g2d.setColor(ColorUIResource.PINK);
-//            g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
-            g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
-//            g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
-            //g2d.setColor(ColorUIResource.YELLOW);
-          }
+//        if (((ModelCity) vertex.getValue()).getName().indexOf("镇朔关") >= 0) {
+//          g2d.setColor(ColorUIResource.GREEN);
+////          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
+//          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+////          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
+//          //g2d.setColor(ColorUIResource.YELLOW);
+//        }
+//        if (((ModelCity) vertex.getValue()).getName().indexOf("鸦鹘关，1") >= 0) {
+//          g2d.setColor(new Color(204, 255, 255));
+////          g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
+//          g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+////          g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
+//          //g2d.setColor(ColorUIResource.YELLOW);
+//        }
+//        if (((ModelCity) vertex.getValue()).getName().indexOf("抚顺关") >= 0) {
+//            g2d.setColor(ColorUIResource.PINK);
+////            g2d.drawOval(vertex.getX() - 188, vertex.getY() - 188, 376, 376);// 圆
+//            g2d.drawOval(vertex.getX() - 250, vertex.getY() - 250, 501, 501);// 圆
+////            g2d.drawOval(vertex.getX() - 375, vertex.getY() - 375, 751, 751);// 圆
+//            //g2d.setColor(ColorUIResource.YELLOW);
+//          }
     }
 
     // 边
@@ -113,6 +130,9 @@ public class ViewMapPanel extends Container {
       for (Edge edge : edgs) {
         g2d.drawLine(edge.getFrom().getX(), edge.getFrom().getY(), 
             edge.getTo().getX(), edge.getTo().getY());
+        g2d.drawString(edge.getComment(), 
+            (edge.getFrom().getX() + edge.getTo().getX()) / 2 - 5,
+            (edge.getFrom().getY() + edge.getTo().getY() ) / 2 - 5);
       }
     }
 

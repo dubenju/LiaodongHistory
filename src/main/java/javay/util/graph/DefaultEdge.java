@@ -1,5 +1,8 @@
 package javay.util.graph;
 
+import javay.distance.DistCnvter;
+import javay.distance.city.ModelCity;
+
 /**
  * 边/弧
  * 在图论中，边（Edge，Line）是两个事物间某种特定关系的抽象化。两个事物间有联系，则这两个事物代表的顶点间就连有边，用一根直线或曲线表示。
@@ -156,4 +159,12 @@ public class DefaultEdge implements Edge, Comparable<DefaultEdge> {
   public void setY2(int y2) {
     this.y2 = y2;
   }
+
+    // TODO: delete
+    @Override
+    public String getComment() {
+        ModelCity city1 = (ModelCity) this.from.getValue();
+        ModelCity city2 = (ModelCity) this.to.getValue();
+        return Double.toString(DistCnvter.getDistance(city1, city2)) + "m";
+    }
 }
