@@ -29,7 +29,6 @@ public class ViewMapPanel extends Container {
    */
   private static final long serialVersionUID = 1L;
   private DefaultGraph graph;
-//  private BufferedImage screenImage;
   private BufferedImage backgroundImage;
 
   /**
@@ -44,14 +43,13 @@ public class ViewMapPanel extends Container {
     this.setPreferredSize(new DimensionUIResource(1320, 1320));
     this.setLayout(null);
     this.setBackground(ColorUIResource.BLACK);
-//    this.screenImage = new BufferedImage(1240, 1240, 2);
     try {
         this.backgroundImage = ImageIO.read(new File("./input/zaoqi2.jpg"));
     } catch (IOException e) {
         e.printStackTrace();
     }
 //    this.screenImage.drawImage(backgroundImage, 0, 0, null);
-    repaint();
+    this.repaint();
   }
 
   /**
